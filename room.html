@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>簡易網頁遊戲</title>
+</head>
+<body>
+  <div class="game-container">
+    <div class="player-info">
+      <h2>對手資訊</h2>
+      <p>對手血量: <span id="opponent-health"></span></p>
+    </div>
+    <div class="player-info">
+      <h2>玩家資訊</h2>
+      <p>玩家血量: <span id="player-health"></span></p>
+      <p>玩家手牌: <span id="player-hand"></span></p>
+    </div>
+    <div class="commands">
+      <button onclick="createRoom()">開房</button>
+      <button onclick="joinRoom()">進房</button>
+      <button onclick="startGame()">開局</button>
+      <button onclick="playerDrawCard()" id="draw-card-button">抽牌</button>
+      <button onclick="playerPlayCard()" id="play-card-button">出牌</button>
+      <button onclick="updateGameInfo(gameData1)">模擬開始</button>
+      <button onclick="updateGameInfo(gameData2)">模擬抽牌</button>
+      <button onclick="updateGameInfo(gameData3)">模擬出牌</button>
+    </div>
+  </div>
+  <div class="chat-container">
+    <h2>聊天</h2>
+    <div id="messages" class="chat-messages">
+      <!-- 聊天訊息會在這裡顯示 -->
+    </div>
+    <div class="chat-input">
+      <input type="text" id="message-input" placeholder="輸入訊息...">
+      <button id="send-button">送出</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
