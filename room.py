@@ -1,10 +1,13 @@
 import asyncio
 import websockets
 import json
+import os
 
 from game import init_game, draw_card, play_card, autoplay_card, game_state_view_as, is_game_over, draw_update_state, play_update_state
 
-server_host, server_port = 'localhost', 8765
+# server_host, server_port = 'localhost', 8765 # local
+server_host, server_port = '', int(os.environ.get("PORT")) # production
+
 
 # 存儲房間和玩家的資訊
 player_conns = {} # conn_id => (room_id, player_id)

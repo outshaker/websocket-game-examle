@@ -1,3 +1,7 @@
+// const serverURL = "ws://localhost:8765" // local
+const serverURL = "ws://*.herokuapp.com" // production
+const ws = new WebSocket(serverURL)
+
 // 初始化之後
 const gameData1 = {
   playerHealth: 50,
@@ -46,7 +50,7 @@ document.getElementById("message-input").addEventListener('keydown', (e) => {
   if (e.code === 'Enter' || e.code === 'NumpadEnter') sendChatMessage()
 }, false);
 
-const ws = new WebSocket("ws://localhost:8765")
+
 var messages = document.getElementById("messages");
 
 function showMessage(message, type='info') {
