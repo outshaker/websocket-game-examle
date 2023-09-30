@@ -46,7 +46,7 @@ document.getElementById("message-input").addEventListener('keydown', (e) => {
   if (e.code === 'Enter' || e.code === 'NumpadEnter') sendChatMessage()
 }, false);
 
-const ws = new WebSocket("ws://shrouded-castle-56322-ddcaf8d0cc91.herokuapp.com/")
+const ws = new WebSocket("wss://shrouded-castle-56322-ddcaf8d0cc91.herokuapp.com/")
 var messages = document.getElementById("messages");
 
 function showMessage(message, type='info') {
